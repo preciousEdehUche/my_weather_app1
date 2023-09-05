@@ -1,0 +1,160 @@
+body {
+  background-image: url(images/cloud.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* color: white; */
+}
+.container {
+  border: double #000000 3px;
+  padding: 30px;
+  /* margin-bottom: 180px; */
+  margin-left: 200px;
+  margin-right: 180px;
+}
+.header-one {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.headtext {
+  font-family: roboto, arial;
+  font-size: large;
+  color: black;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+#enterCity {
+  width: 400px;
+  padding: 15px;
+  background-color: rgb(231, 230, 230);
+  border: solid gray 1px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 2px gray;
+}
+
+#search {
+  padding: 15px;
+  border: solid gray 1px;
+  margin-left: 0px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 2px gray;
+  color: grey;
+  transition: 150ms;
+}
+#search:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: #fff;
+}
+
+#current {
+  padding: 15px;
+  border: solid gray 1px;
+  margin-left: 0px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 2px gray;
+  color: grey; 
+  transition: 150ms;
+}
+#current:hover{
+  cursor: pointer;
+  background-color: blue;
+  color: #fff;
+}
+
+.body-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.left-body {
+  display: inline-block;
+}
+
+.location {
+  font-family: roboto, arial;
+  font-size: larger;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.temp {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 55px;
+  font-weight: bolder;
+}
+
+.temp-span {
+  font-size: 30px;
+  position: relative;
+  bottom: 20px;
+}
+.celsuis,
+.fahrenhit {
+  text-decoration: none;
+  color: blue;
+}
+.celsuis:hover,
+.fahrenhit:hover {
+  color: blueviolet;
+}
+
+#description{
+ font-family: arial;
+ font-weight: 600;
+ font-style: italic;
+}
+
+.time {
+  font-family: roboto, arial;
+  font-size: large;
+  font-weight: 600;
+}
+
+.right-body {
+  display: inline-block;
+}
+
+.right-body {
+  font-size: medium;
+  font-family: roboto, arial;
+  font-weight: 600;
+  font-style: italic;
+  position: relative;
+  left: 250px;
+  top: 45px;
+  text-decoration: none;
+}
+
+
+.bottom-page {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.bottom-one,
+.bottom-two,
+.bottom-three,
+.bottom-four,
+.bottom-five,
+.bottom-six,
+.bottom-last {
+  background-color: blue;
+  width: 75px;
+  color: white;
+  border-radius: 40px;
+}
+
+.bottom-one-card,
+.bottom-two-card,
+.bottom-three-card,
+.bottom-four-card,
+.bottom-five-card,
+.bottom-six-card,
+.bottom-last-card {
+  position: relative;
+  left: 20px;
+}

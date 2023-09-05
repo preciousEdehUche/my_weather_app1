@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER</title>
+    <link rel="stylesheet" href="WEATHER APP.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-one">
+          <p class="headtext">Lagos</p>
+          <p class="headtext">Abuja</p>
+          <p class="headtext">Enugu</p>
+          <p class="headtext">Gombe</p>
+        </div>
+
+        <div class="header-two">
+          <form action="" id="search-form">
+            <input
+              type="text"
+              id="enterCity"
+              placeholder="Enter a city"
+              autocomplete="off"
+            />
+            <button id="search">Search</button>
+            <button id="current">Current</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="body-container">
+        <div class="left-body">
+          <p>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span class="location"> Lagos, Nigeria</span>
+          </p>
+          <p>
+            <span class="temp">19 </span>
+            <span class="temp-span"
+              ><a class="celsuis" href="">&#8451;</a>|<a
+                class="fahrenhit"
+                href=" "
+                >&#8457;</a
+              ></span
+            >
+            <i class="fa fa-cloud" style="font-size: 70px; color: blue"></i>
+            <p id="description">cloudy</p>
+          </p>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <p class="time">Wednesday 11, 10:03</p>
+        </div>
+
+        <div class="right-body">
+          <p>Humidity: <span id="Humidity"> 73</span>%</p>
+          <p>Wind: <span id="Wind">10</span>km/h</p>
+        </div>
+      </div>
+
+      <div class="bottom-page">
+        <div class="bottom-one">
+          <div class="bottom-one-card">
+            <p>Mon</p>
+            <p>🌥</p>
+            <p>21&#8451;</p>
+          </div>
+        </div>
+
+        <div class="bottom-two">
+          <div class="bottom-two-card">
+            <p>Tue</p>
+            <p>🌧</p>
+            <p>22&#8451;</p>
+          </div>
+        </div>
+
+        <div class="bottom-three">
+          <div class="bottom-three-card">
+            <p>Wed</p>
+            <p>☀</p>
+            <p>24&#8451;</p>
+          </div>
+        </div>
+
+        <div class="bottom-four">
+          <div class="bottom-four-card">
+            <p>Thu</p>
+            <p>☀</p>
+            <p>28&#8451;</p>
+          </div>
+        </div>
+
+        <div class="bottom-five">
+          <div class="bottom-five-card">
+            <p>Fri</p>
+            <p>🌩</p>
+            <p>24&#8451;</p>
+          </div>
+        </div>
+
+        <div class="bottom-six">
+          <div class="bottom-six-card">
+            <p>Sat</p>
+            <p>☁</p>
+            <p>26&#8451;</p>
+          </div>
+        </div>
+
+        <div class="bottom-last">
+          <div class="bottom-last-card">
+            <p>Sun</p>
+            <p>☀</p>
+            <p>26&#8451;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/myWEATHERAPP.js"></script>
+  </body>
+</html>
