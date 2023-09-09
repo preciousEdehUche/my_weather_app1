@@ -4,10 +4,13 @@ body {
   background-repeat: no-repeat;
   /* color: white; */
 }
+.app-wrapper{
+  max-width: 1500px;
+  margin: 20px;
+}
 .container {
   border: double #000000 3px;
   padding: 30px;
-  /* margin-bottom: 180px; */
   margin-left: 200px;
   margin-right: 180px;
 }
@@ -106,10 +109,14 @@ body {
  font-style: italic;
 }
 
-.time {
+#time {
   font-family: roboto, arial;
   font-size: large;
   font-weight: 600;
+}
+
+#icon{
+  width: 100px;
 }
 
 .right-body {

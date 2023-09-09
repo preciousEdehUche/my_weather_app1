@@ -1,7 +1,6 @@
-let currentTime = new Date();
-
-let time = document.querySelector(".time");
-
+function formattedTime(timestamp) {
+  
+let currentTime = new Date(timestamp);
 let days = [
   "Sunday",
   "Monday",
@@ -26,16 +25,18 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-time.innerHTML = ` ${day} ${date}, ${hour}:${minutes} `;
-
+return ` Last updated: ${day} ${date}, ${hour}:${minutes} `;
+}
 function currentTemp (response) {
  document.querySelector(".temp").innerHTML = Math.round(response.data.main.temp); 
- console.log(response.data)
  document.querySelector("#Humidity").innerHTML = response.data.main.humidity; 
  document.querySelector("#Wind").innerHTML = Math.round(response.data.wind.speed); 
  document.querySelector("#description").innerHTML = response.data.weather[0].description; 
+ document.querySelector("#time").innerHTML =formattedTime(response.data.dt*1000); 
+ let iconElement = document.querySelector("#icon");
+ iconElement.setAttribute("src" ,  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) 
+console.log(response.data.weather[0].icon)
  
-
 }
 
 function map(event) {
