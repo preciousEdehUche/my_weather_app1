@@ -93,14 +93,23 @@ body {
   position: relative;
   bottom: 20px;
 }
-.celsuis,
-.fahrenhit {
+
+.passiveTemp {
   text-decoration: none;
   color: blue;
+  cursor: default;
 }
-.celsuis:hover,
-.fahrenhit:hover {
-  color: blueviolet;
+
+.active{
+  color: #000000;
+  text-decoration: none;
+  cursor: default;
+}
+
+.active:hover{
+  color: #000000;
+  text-decoration: none;
+  cursor: default;
 }
 
 #description{

@@ -28,7 +28,8 @@ if (minutes < 10) {
 return ` Last updated: ${day} ${date}, ${hour}:${minutes} `;
 }
 function currentTemp (response) {
- document.querySelector(".temp").innerHTML = Math.round(response.data.main.temp); 
+  celsuisTemperature = Math.round(response.data.main.temp);
+ document.querySelector(".temp").innerHTML = celsuisTemperature 
  document.querySelector("#Humidity").innerHTML = response.data.main.humidity; 
  document.querySelector("#Wind").innerHTML = Math.round(response.data.wind.speed); 
  document.querySelector("#description").innerHTML = response.data.weather[0].description; 
@@ -56,28 +57,32 @@ let city = searchInput.value;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", map);
 
-function temp(event) {
+function displayCelsuis(event) {
   event.preventDefault();
+  celsuis.classList.add("active")
+  fahrenhit.classList.remove("active")
   let degreeTemp = document.querySelector(".temp");
-  degreeTemp.innerHTML = "19";
+  degreeTemp.innerHTML = Math.round(celsuisTemperature);
 }
 
-let celsuis = document.querySelector(".celsuis");
+let celsuis = document.querySelector("#celsuis");
+celsuis.addEventListener("click", displayCelsuis);
 
-celsuis.addEventListener("click", temp);
-
-function tempTwo(event) {
+function displayFahrenhit(event) {
   event.preventDefault();
+  celsuis.classList.remove("active")
+  fahrenhit.classList.add("active")
   let degreeTemp = document.querySelector(".temp");
-  degreeTemp.innerHTML = "66";
+  let fahrenhitTemp = (celsuisTemperature * 9/5) + 32;
+  degreeTemp.innerHTML = Math.round(fahrenhitTemp);
 }
 
-let fahrenhit = document.querySelector(".fahrenhit");
+let fahrenhit = document.querySelector("#fahrenhit");
+fahrenhit.addEventListener("click", displayFahrenhit);
 
-fahrenhit.addEventListener("click", tempTwo);
+let celsuisTemperature = null
 
-
-
+// search("lagos")
 // function currentPosition(position) {
   //  let lat =position.coords.latitude;
   //  let lon = position.coords.longitude; 
