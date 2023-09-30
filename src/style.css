@@ -2,7 +2,6 @@ body {
   background-image: url(/images/cloud.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* color: white; */
 }
 .app-wrapper{
   max-width: 1500px;
@@ -16,7 +15,7 @@ body {
 }
 .header-one {
   display: flex;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 .headtext {
   font-family: roboto, arial;
@@ -59,6 +58,7 @@ body {
   box-shadow: 2px 4px 2px gray;
   color: grey; 
   transition: 150ms;
+
 }
 #current:hover{
   cursor: pointer;
@@ -106,11 +106,6 @@ body {
   cursor: default;
 }
 
-.active:hover{
-  color: #000000;
-  text-decoration: none;
-  cursor: default;
-}
 
 #description{
  font-family: arial;
@@ -173,4 +168,186 @@ body {
 .bottom-last-card {
   position: relative;
   left: 20px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .app-wrapper{
+    max-width: 600px;
+    /* margin: 15px; */
+  }
+
+  .container {
+    border: double #000000 3px;
+    padding: 15px;
+    width: 350px;
+    margin-left: 80px;
+    /* align-items: center; */
+  }
+
+  .header-one {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .headtext {
+    font-family: roboto, arial;
+    font-size:small;
+    color: black;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+
+  #enterCity {
+    width: 150px;
+    padding: 10px;
+    background-color: rgb(231, 230, 230);
+    border: solid gray 1px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 2px gray;
+  }
+
+  #search {
+    padding: 10px;
+    border: solid gray 1px;
+    margin-left: 0px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 2px gray;
+    color: grey;
+    transition: 150ms;
+    width: 70px;
+    /* display: inline-block; */
+  }
+  #search:hover {
+    cursor: pointer;
+    background-color: blue;
+    color: #fff;
+  }
+  
+  #current {
+    padding: 10px;
+    border: solid gray 1px;
+    margin-left: 0px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 2px gray;
+    color: grey; 
+    transition: 150ms;
+    width: 70px;
+    /* display: inline-block; */
+  }
+  #current:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: #fff;
+  }
+
+  .body-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .left-body {
+    display: inline-block;
+  }
+  
+  .location {
+    font-family: roboto, arial;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+  
+  .temp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+  }
+  
+  .temp-span {
+    font-size: 15px;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  .passiveTemp {
+    text-decoration: none;
+    color: blue;
+    cursor: default;
+  }
+  
+  .active{
+    color: #000000;
+    text-decoration: none;
+    cursor: default;
+  }
+  
+  
+  #description{
+   font-family: arial;
+   font-weight: 600;;
+   font-style: italic;
+  }
+  
+  #time {
+    font-family: roboto, arial;
+    font-size: medium;
+    font-weight: 600;
+  }
+  
+  #icon{
+    width: 50px;
+  }
+  
+  .right-body {
+    display: inline-block;
+  }
+  
+  .right-body {
+    font-size: small;
+    font-family: roboto, arial;
+    font-weight: 600;
+    font-style: italic;
+    position: relative;
+    left: 80px;
+    top: 15px;
+    text-decoration: none;
+  }
+  
+  
+  .bottom-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+  }
+  
+  .bottom-one,
+  .bottom-two,
+  .bottom-three,
+  .bottom-four,
+  .bottom-five,
+  .bottom-six,
+  .bottom-last {
+    background-color: blue;
+    width: 50px;
+    color: white;
+    border-radius: 40px;
+  }
+  
+  .bottom-one-card,
+  .bottom-two-card,
+  .bottom-three-card,
+  .bottom-four-card,
+  .bottom-five-card,
+  .bottom-six-card,
+  .bottom-last-card {
+    position: relative;
+    right: 10px;
+    left: 11px;
+    font-size: smaller;
+  }
+  
+
 }

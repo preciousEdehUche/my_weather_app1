@@ -25,7 +25,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-return ` Last updated: ${day} ${date}, ${hour}:${minutes} `;
+return ` ${day} ${date}, ${hour}:${minutes} `;
 }
 function currentTemp (response) {
   celsuisTemperature = Math.round(response.data.main.temp);
@@ -42,17 +42,15 @@ console.log(response.data.weather[0].icon)
 
 function map(event) {
   event.preventDefault();
-
   let searchInput = document.querySelector("#enterCity");
   let place = document.querySelector(".location");
   place.innerHTML = searchInput.value;
-
 let city = searchInput.value;
-  let apiKey = "b99ee1eacb9208b8278c9be72e3dcc37";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  
-  axios.get(apiUrl).then(currentTemp);
+let apiKey = "b99ee1eacb9208b8278c9be72e3dcc37";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(currentTemp);
 }
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", map);
@@ -82,7 +80,7 @@ fahrenhit.addEventListener("click", displayFahrenhit);
 
 let celsuisTemperature = null
 
-// search("lagos")
+
 // function currentPosition(position) {
   //  let lat =position.coords.latitude;
   //  let lon = position.coords.longitude; 
