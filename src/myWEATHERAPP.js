@@ -81,6 +81,28 @@ fahrenhit.addEventListener("click", displayFahrenhit);
 let celsuisTemperature = null
 
 
+
+function weatherForeCast() {
+let days = ["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+
+let forecastHtml ="";
+
+days.forEach (function  (day) {
+  forecastHtml = forecastHtml +
+  `<div class="weather-forecast">
+  <div class="weather-forecast-day">${day}</div>
+    <div class="weather-forecast-icon">🌦️</div>
+    <div><span id="weather-forecast-max">27°</span> 
+      <span id="weather-forecast-min">21°</span> </div>
+  </div>`;
+});
+
+ let foreCastDay = document.querySelector("#bottom-page");
+  foreCastDay.innerHTML = forecastHtml;
+};
+
+weatherForeCast();
+
 // function currentPosition(position) {
   //  let lat =position.coords.latitude;
   //  let lon = position.coords.longitude; 
